@@ -1,0 +1,39 @@
+ .tags {
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    justify-content: space-around;
+    padding: -10px;
+}
+
+/* Apply styles only to footer inside .tags */
+.tags-footer {
+    padding-top: 2px;
+    margin-top: 1px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Apply styles only inside .tags-footer to prevent conflicts */
+.tags-footer a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tags-footer a i {
+    background-color: white;
+    color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* Hover effect */
+.tags-footer a:hover i {
+    opacity: 0.7;
+    transition: 0.4s;
+}

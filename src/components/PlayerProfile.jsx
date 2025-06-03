@@ -7,60 +7,45 @@ import { MdOutlineEmail } from "react-icons/md";
 import { GiTiedScroll } from "react-icons/gi";
 import { FaRegEye } from "react-icons/fa";
 import PlayerResume from "../assets/PDF/PlayerResume.pdf";
+import { Link } from "react-router-dom";
 
 const PlayerProfile = () => {
   return (
-    <div>
-            <style>
-                {`
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-`}</style>
-      <div className="page-container justify-content-center"> 
+    <div id="profile">
+      <div className=" justify-content-center align-items-center">
         {/* Page Content */}
 
         {/* Performance Section */}
         <InView triggerOnce={true}>
           {({ inView, ref }) => (
-            <div ref={ref} className={`w3-content w3-justify w3-text-grey w3-padding-16 
+            <div
+              ref={ref}
+              className={`section-container
                ${inView ? "animate-fade-in" : ""}`}
-            id="profile"
-        >
-
-
+            >
               <div className="row d-flex justify-content-center align-items-center g-3 w3-margin-bottom">
-         
-  {/* Main row with column 4 and nested columns in column 8 */}
+                {/* Main row with column 4 and nested columns in column 8 */}
                 <div className="col-sm-12 col-md-4 col-lg-4">
                   <div className="w3-hide-small w3-hide-medium">
-                    <img src={ClaySmall} alt="clay" style={{ width: "90%" }} />
+                    <img src={ClaySmall} alt="clay" style={{ width: "100%" }} />
                   </div>
                 </div>
                 <div className="col-sm-12 col-md-8 col-lg-8">
                   <div className="row d-flex justify-content-center align-items-center g-2">
-                  <div className="w3-text-white">
+                    <div className="w3-text-white">
                       <h1 className="w3-text-light-grey">
-                        <i className="fas fa-user small w3-margin-right w3-hide-large"></i>Player Profile</h1>
+                        <i className="fas fa-user small w3-margin-right"></i>
+                        Player Profile
+                      </h1>
                       <hr className="w3-opacity" />
                     </div>
 
-
-
                     <div className="col-sm-12 col-md-6 col-lg-6">
-
-                   {/*start col-1 for large*/}
+                      {/*start col-1 for large*/}
                       <div className="w3-hide-small w3-hide-medium">
                         <p
                           className="my-0 py-0 text-white"
-                          style={{ marginBottom: "4px",
-                            fontSize: ".9rem" 
-                           }}
+                          style={{ marginBottom: "4px", fontSize: ".9rem" }}
                         >
                           <span
                             className="fa-fw"
@@ -73,21 +58,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                               <RiHome6Line />
                             </b>{" "}
                           </span>
-                          <span
-                            className="text-white"
-                          >
-                            {" "}
-                            CATCHER
-                          </span>
+                          <span className="text-white"> CATCHER</span>
                           <br />
                         </p>
 
-
                         <p
                           className="my-0 py-0 text-white"
-                          style={{ marginBottom: "4px",
-                            fontSize: ".9rem" 
-                           }}
+                          style={{ marginBottom: "4px", fontSize: ".9rem" }}
                         >
                           <span
                             className="fa-fw"
@@ -96,19 +73,17 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                             <b
                               className="personal-icon text-white-50"
                               style={{ fontSize: "1.1rem" }}
-                            ><HiAcademicCap /></b>{" "}
+                            >
+                              <HiAcademicCap />
+                            </b>{" "}
                           </span>
-                          <span className="text-white">
-                            {" "} 2024</span>
+                          <span className="text-white"> 2024</span>
                           <br />
                         </p>
 
-                    
                         <p
                           className="my-0 py-0 text-white"
-                          style={{ marginBottom: "4px",
-                            fontSize: ".9rem" 
-                           }}
+                          style={{ marginBottom: "4px", fontSize: ".9rem" }}
                         >
                           <span
                             className="fa-fw"
@@ -116,20 +91,21 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                           >
                             <b
                               className="personal-icon text-white-50"
-                              style={{ fontSize: "1.1rem" }}>
-                                <GiTiedScroll /></b>{" "}
+                              style={{ fontSize: "1.1rem" }}
+                            >
+                              <GiTiedScroll />
+                            </b>{" "}
                           </span>
                           <span className="text-white">
-                            {" "}   SAT-9000 | GPA- 5.0</span>
+                            {" "}
+                            SAT-9000 | GPA- 5.0
+                          </span>
                           <br />
                         </p>
-                   
- 
+
                         <p
                           className="my-0 py-0 text-white"
-                          style={{ marginBottom: "4px",
-                            fontSize: ".9rem" 
-                           }}
+                          style={{ marginBottom: "4px", fontSize: ".9rem" }}
                         >
                           <span
                             className="fa-fw"
@@ -137,20 +113,18 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                           >
                             <b
                               className="personal-icon text-white-50"
-                              style={{ fontSize: "1.1rem" }}>
-                                <GiRotaryPhone /></b>{" "}
+                              style={{ fontSize: "1.1rem" }}
+                            >
+                              <GiRotaryPhone />
+                            </b>{" "}
                           </span>
-                          <span className="text-white">
-                            {" "}    (123) 456-7890</span>
+                          <span className="text-white"> (123) 456-7890</span>
                           <br />
                         </p>
-                       
 
                         <p
                           className="my-0 py-0 text-white"
-                          style={{ marginBottom: "4px",
-                            fontSize: ".9rem" 
-                           }}
+                          style={{ marginBottom: "4px", fontSize: ".9rem" }}
                         >
                           <span
                             className="fa-fw"
@@ -158,20 +132,18 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                           >
                             <b
                               className="personal-icon text-white-50"
-                              style={{ fontSize: "1.1rem" }}>
-                                   <MdOutlineEmail /></b>{" "}
+                              style={{ fontSize: "1.1rem" }}
+                            >
+                              <MdOutlineEmail />
+                            </b>{" "}
                           </span>
-                          <span className="text-white">
-                            {" "}   EMAIL@MAIL.COM</span>
+                          <span className="text-white"> EMAIL@MAIL.COM</span>
                           <br />
                         </p>
 
-                      
                         <p
                           className="my-0 py-0 text-white"
-                          style={{ marginBottom: "4px",
-                            fontSize: ".9rem" 
-                           }}
+                          style={{ marginBottom: "4px", fontSize: ".9rem" }}
                         >
                           <span
                             className="fa-fw"
@@ -179,47 +151,54 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                           >
                             <b
                               className="personal-icon text-white-50"
-                              style={{ fontSize: "1.1rem" }}>
-                                   <FaRegEye /></b>{" "}
+                              style={{ fontSize: "1.1rem" }}
+                            >
+                              <FaRegEye />
+                            </b>{" "}
                           </span>
-                          <span className="text-white">
-                            {" "}  PBR PROFILE</span>
+                          <span className="text-white"> PBR PROFILE</span>
                           <br />
                         </p>
-                 
-                 
-                        <div
-                          className="py-2 text-white">
-                            <span className="text-white-50" style={{fontSize:'.8'}}>FOLLOW ME: </span>
-     <a href='/' className=" link-light w3-hover-opacity">
-     <i className="fab fa-square-x-twitter" style={{fontSize:'1.35rem', marginRight:'5px'}}></i>
-     </a>   
-   <a href='/' className=" link-light w3-hover-opacity">
-     <i className="fab fa-square-instagram" style={{fontSize:'1.35rem', marginRight:'5px'}}></i>
-     </a>
-     <a href='/' className=" link-light w3-hover-opacity">
-     <i className="fab fa-square-facebook" style={{fontSize:'1.35rem', marginRight:'5px'}}></i>
-     </a>  
-     <a href='/' className=" link-light w3-hover-opacity">
-     <i className="fab fa-square-snapchat"  style={{fontSize:'1.35rem', marginRight:'5px'}}></i>
-        </a>
-  
 
-                        </div>   
+                        <div className="py-2 text-white">
+                          <ul className="social-icons">
+                            <li>
+                              <Link
+                                to="https://www.facebook.com/"
+                                className="globe"
+                              >
+                                <i className="fas fa-globe"></i>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to="https://www.facebook.com/">
+                                <i className="fab fa-facebook-f"></i>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                to="https://twitter.com/"
+                                className="twitter"
+                              >
+                                <i className="fab fa-x-twitter"></i>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                to="https://www.instagram.com/"
+                                className="instagram"
+                              >
+                                <i className="fab fa-instagram-square"></i>
+                              </Link>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
-{/*end col-1 for small and medium*/}
+                      {/*end col-1 for small and medium*/}
 
-
-
-{/*start col-1 for small and medium*/}
-                                 <div className=" w3-hide-large py-2">
-                                       <h3 className="text-white-50 fw-bold">
-                        <i className=" fas fa-user small w3-margin-right"></i>Player Profile</h3>
-                        <hr className="w3-opacity mb-4" />
-                        <p
-                            className="my-1 text-white"
-                          
-                        >
+                      {/*start col-1 for small and medium*/}
+                      <div className=" w3-hide-large py-2">
+                        <p className="my-1 text-white">
                           <span
                             className="fa-fw"
                             style={{ marginRight: "4px" }}
@@ -233,7 +212,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                           </span>
                           <span
                             className="text-white"
-                           style={{letterSpacing:'3px'}}
+                            style={{ letterSpacing: "3px" }}
                           >
                             {" "}
                             CATCHER
@@ -241,10 +220,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                           <br />
                         </p>
 
-                        <p
-                            className="my-1 text-white"
-                         
-                        >
+                        <p className="my-1 text-white">
                           <span
                             className="fa-fw"
                             style={{ marginRight: "4px" }}
@@ -259,7 +235,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                           </span>{" "}
                           <span
                             className="text-white"
-                              style={{letterSpacing:'3px'}}
+                            style={{ letterSpacing: "3px" }}
                           >
                             {" "}
                             2024
@@ -267,10 +243,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                           <br />
                         </p>
 
-                        
-                        <p
-                             className="my-1 text-white"
-                        >
+                        <p className="my-1 text-white">
                           <span
                             className="fa-fw"
                             style={{ marginRight: "4px" }}
@@ -280,12 +253,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                               style={{ fontSize: "1.2rem" }}
                             >
                               {" "}
-                              < GiTiedScroll />
+                              <GiTiedScroll />
                             </b>
                           </span>{" "}
                           <span
                             className="text-white"
-                            style={{letterSpacing:'3px'}}
+                            style={{ letterSpacing: "3px" }}
                           >
                             {" "}
                             SAT-9000 | GPA- 5.0
@@ -293,10 +266,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                           <br />
                         </p>
 
-
-                        <p
-                             className="my-1 text-white"
-                        >
+                        <p className="my-1 text-white">
                           <span
                             className="fa-fw"
                             style={{ marginRight: "4px" }}
@@ -305,23 +275,21 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                               className=" text-white-50"
                               style={{ fontSize: "1.2rem" }}
                             >
-                                 <GiRotaryPhone />{" "}
+                              <GiRotaryPhone />{" "}
                             </b>
                           </span>{" "}
-                          <a href="tel:1234567890"
+                          <a
+                            href="tel:1234567890"
                             className="text-white text-decoration-underline"
-                            style={{letterSpacing:'3px'}}
+                            style={{ letterSpacing: "3px" }}
                           >
                             (123) 456-7890
                           </a>
                           <br />
                         </p>
 
-
-                        <p
-                           className="my-1 text-white"
-                        >
-    <span
+                        <p className="my-1 text-white">
+                          <span
                             className="fa-fw"
                             style={{ marginRight: "4px" }}
                           >
@@ -332,23 +300,18 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                               <MdOutlineEmail />{" "}
                             </b>
                           </span>{" "}
-                     
-                          <a href="mailto:mail@gmail.com"
-                             className="text-white text-decoration-underline"
-                             style={{letterSpacing:'3px'}}
+                          <a
+                            href="mailto:mail@gmail.com"
+                            className="text-white text-decoration-underline"
+                            style={{ letterSpacing: "3px" }}
                           >
                             EMAIL@MAIL.COM
                           </a>
                           <br />
                         </p>
 
-
-
-
-                        <p
-                           className="my-1 text-white"
-                        >
-    <span
+                        <p className="my-1 text-white">
+                          <span
                             className="fa-fw"
                             style={{ marginRight: "4px" }}
                           >
@@ -356,46 +319,67 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                               className=" text-white-50"
                               style={{ fontSize: "1.2rem" }}
                             >
-                              < FaRegEye />{" "}
+                              <FaRegEye />{" "}
                             </b>
                           </span>{" "}
-                     
-                        
-                          <a href="https://www.prepbaseballreport.com/"
-                           className="text-white text-decoration-underline"
-                           style={{letterSpacing:'3px'}}
+                          <a
+                            href="https://www.prepbaseballreport.com/"
+                            className="text-white text-decoration-underline"
+                            style={{ letterSpacing: "3px" }}
                           >
-                            
-                         PBR PROFILE{" "}
+                            PBR PROFILE{" "}
                           </a>
-                        
                         </p>
-                   
-                        <div
-                          className="py-2 text-white">
-                            <span className="text-white-50" style={{fontSize:'.8'}}>FOLLOW ME: </span>
-     <a href='/' className=" link-light w3-hover-opacity">
-     <i className="fab fa-square-x-twitter" style={{fontSize:'1.35rem', marginRight:'7px'}}></i>
-     </a>   
-   <a href='/' className=" link-light w3-hover-opacity">
-     <i className="fab fa-square-instagram" style={{fontSize:'1.35rem', marginRight:'7px'}}></i>
-     </a>
-     <a href='/' className=" link-light w3-hover-opacity">
-     <i className="fab fa-square-facebook" style={{fontSize:'1.35rem', marginRight:'7px'}}></i>
-     </a>  
-     <a href='/' className=" link-light w3-hover-opacity">
-     <i className="fab fa-square-snapchat"  style={{fontSize:'1.35rem', marginRight:'7px'}}></i>
-        </a>
-  
 
-                        </div>   
+                        <div className="py-2 text-white">
+                          <span
+                            className="text-white-50"
+                            style={{ fontSize: ".8" }}
+                          >
+                            FOLLOW ME:{" "}
+                          </span>
+                          <a href="/" className=" link-light w3-hover-opacity">
+                            <i
+                              className="fab fa-square-x-twitter"
+                              style={{
+                                fontSize: "1.35rem",
+                                marginRight: "7px",
+                              }}
+                            ></i>
+                          </a>
+                          <a href="/" className=" link-light w3-hover-opacity">
+                            <i
+                              className="fab fa-square-instagram"
+                              style={{
+                                fontSize: "1.35rem",
+                                marginRight: "7px",
+                              }}
+                            ></i>
+                          </a>
+                          <a href="/" className=" link-light w3-hover-opacity">
+                            <i
+                              className="fab fa-square-facebook"
+                              style={{
+                                fontSize: "1.35rem",
+                                marginRight: "7px",
+                              }}
+                            ></i>
+                          </a>
+                          <a href="/" className=" link-light w3-hover-opacity">
+                            <i
+                              className="fab fa-square-snapchat"
+                              style={{
+                                fontSize: "1.35rem",
+                                marginRight: "7px",
+                              }}
+                            ></i>
+                          </a>
+                        </div>
                       </div>
                     </div>
-{/*end col-1 for small and medium*/}
+                    {/*end col-1 for small and medium*/}
 
-
-
-    {/*col 2 for large*/}
+                    {/*col 2 for large*/}
                     <div className="col-sm-12 col-md-6 col-lg-6">
                       <div className=" w3-hide-small w3-hide-medium py-2">
                         <p
@@ -490,20 +474,20 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                             Download Resume
                           </button>
                         </a>
-                        <br /> 
+                        <br />
                       </div>
 
-{/* for small and medium*/}
-                         <div className=" w3-hide-large py-2">
-                         <div className="w3-text-white mt-3 w3-hide-large">
-                      <h3 className="text-white-50 fw-bold">
-                        <i className="fas fa-dumbbell small w3-margin-right"></i>Physical Metrics</h3>
-                      <hr className="w3-opacity mb-4" />
-                    </div>
-                    
-                        <h6
-                          className="py-1 text-white"
-                        >
+                      {/* for small and medium*/}
+                      <div className=" w3-hide-large py-2">
+                        <div className="w3-text-white mt-3 w3-hide-large">
+                          <h3 className="text-white-50 fw-bold">
+                            <i className="fas fa-dumbbell small w3-margin-right"></i>
+                            Physical Metrics
+                          </h3>
+                          <hr className="w3-opacity mb-4" />
+                        </div>
+
+                        <h6 className="py-1 text-white">
                           {" "}
                           BATS:{" "}
                           <span
@@ -523,9 +507,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                           </span>
                         </h6>
 
-                        <h6
-                          className="py-1 text-white"
-                        >
+                        <h6 className="py-1 text-white">
                           {" "}
                           HEIGHT:{" "}
                           <span
@@ -535,7 +517,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                             {" "}
                             6&apos;0
                           </span>{" "}
-                           WEIGHT:
+                          WEIGHT:
                           <span
                             className=" text-white-50"
                             style={{ marginRight: "4px" }}
@@ -545,9 +527,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                           </span>
                         </h6>
 
-                        <h6
-                          className="py-1 text-white mt-2 mb-5"
-                        >
+                        <h6 className="py-1 text-white mt-2 mb-5">
                           {" "}
                           BORN:{" "}
                           <span
@@ -559,26 +539,44 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                           </span>
                         </h6>
                         <div className="w3-text-white">
-                        <h3 className="text-white-50 fw-bold">
-                        <i className=" fas fa-book-open small w3-margin-right"></i>Eligibility Status</h3>
-                     <hr className="w3-opacity" />
-                    </div>
+                          <h3 className="text-white-50 fw-bold">
+                            <i className=" fas fa-book-open small w3-margin-right"></i>
+                            Eligibility Status
+                          </h3>
+                          <hr className="w3-opacity" />
+                        </div>
                         <div className="mt-4">
-                        <p
-                          className="my-1 text-white"
-                        > <span style={{ color:'#9ad7ff'}}>NCAA STATUS:</span>
-                          {" "} Registered <i className="fas fa-check-circle" style={{ color:'#9ad7ff'}}></i> 
-                        </p>
-                        <p  
-                          className="my-1 text-white"
-                        > <span style={{ color:'#9ad7ff'}}>NCAA ID: </span>
-                          {" "} #81238765 
-                        </p>
+                          <p className="my-1 text-white">
+                            {" "}
+                            <span style={{ color: "#9ad7ff" }}>
+                              NCAA STATUS:
+                            </span>{" "}
+                            Registered{" "}
+                            <i
+                              className="fas fa-check-circle"
+                              style={{ color: "#9ad7ff" }}
+                            ></i>
+                          </p>
+                          <p className="my-1 text-white">
+                            {" "}
+                            <span style={{ color: "#9ad7ff" }}>
+                              NCAA ID:{" "}
+                            </span>{" "}
+                            #81238765
+                          </p>
                         </div>
                         <a id="download" download href={PlayerResume}>
-                          <button className="w3-button w-100 px-5 rounded text-decoration-none w3-white mt-2"
-                          style={{ fontSize: "1rem", fontWeight: "light", textShadow:'1px 1px 3px black ', boxShadow: "1px 1px 6px rgba(104, 106, 107, 0.75)" }}>  
-                          DOWNLOAD CHEATSHEET
+                          <button
+                            className="w3-button w-100 px-5 rounded text-decoration-none w3-white mt-2"
+                            style={{
+                              fontSize: "1rem",
+                              fontWeight: "light",
+                              textShadow: "1px 1px 3px black ",
+                              boxShadow:
+                                "1px 1px 6px rgba(104, 106, 107, 0.75)",
+                            }}
+                          >
+                            DOWNLOAD CHEATSHEET
                           </button>
                         </a>
                       </div>

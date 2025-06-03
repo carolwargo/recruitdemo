@@ -1,55 +1,26 @@
 import { Carousel } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap styles
-
 import State from "../assets/images/Expand/State.png";
 import Conf from "../assets/images/Expand/Conf.png";
 import Preseason from "../assets/images/Expand/Preseason.png";
 import TeamMD from "../assets/images/Expand/TeamMD.png";
 import B26 from "../assets/images/Expand/B26.png";
 import NCAA from "../assets/images/Expand/NCAA.png";
+import { InView } from "react-intersection-observer"; // Import InView for animations
+import '../styles/CarouselSmall.css'; // Import your custom styles for the carousel
+import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap styles
+import cards from '../data/carouselData';
 
-const cards = [
-  { id: "h1", title: "All-State Honors", img: State, link: "https://x.com" },
-  { id: "h2", title: "Big 26 Honors", img: B26, link: "https://x.com" },
-  { id: "h3", title: "Big 26 Team Maryland", img: TeamMD, link: "https://x.com" },
-  { id: "h4", title: "NCAA Baseball Opening Day", img: NCAA, link: "https://x.com" },
-  { id: "h5", title: "Preseason Banquet", img: Preseason, link: "https://x.com" },
-  { id: "h6", title: "All-Conference Honors", img: Conf, link: "https://x.com" },
-];
 
 const CarouselSmall = () => {
   return (
     <div>
-      <style>
-        {`
-        .carousel-image-wrapper {
-  position: relative;
-  width: 100%;
-}
+        <InView triggerOnce={true}>
+          {({ inView, ref }) => (
+            <div ref={ref} className={`section-container
+               ${inView ? "animate-fade-in" : ""}`}
+    
+        >
 
-.carousel-image-wrapper::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Adjust the darkness */
-}
-
-.carousel-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.carousel-title { 
-text-shadow: 2px 2px 4px #000000; 
-        }
-
-        `}
-      </style>
-    <div className="container">
       <h2>Carousel Example</h2>
       <Carousel interval={3000} fade>
         {cards.map((card) => (
@@ -78,8 +49,11 @@ text-shadow: 2px 2px 4px #000000;
           </Carousel.Item>
         ))}
       </Carousel>
+            </div>
+          )}
+        </InView>
     </div>
-    </div>
+
   );
 };
 

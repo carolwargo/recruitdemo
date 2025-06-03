@@ -4,65 +4,28 @@ import { InView } from "react-intersection-observer";
 
 const PlayerPerformance = () => {
   return (
-    <div>
-      <style>
-        {`
-  
-        /*start ANIMATIONS*/
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideLeft {
-  from { transform: translateX(-100%); }
-  to { transform: translateX(0); }
-}
-
-.animate-fade-in {
-  animation: fadeIn 2s ease-in-out;
-}
-
-.animate-slide-left {
-  animation: slideLeft 2s ease-in-out;
-}
-
-/*end ANIMATIONS*/
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-.w3-sidebar {width: 120px;background: #222;}
-#main {margin-left: 120px}
-@media only screen and (max-width: 600px) 
-{#main {margin-left: 0}}
- `}
-      </style>
-
-      <div className="page-container">
-        {/* Page Content */}
-
+    <div id="performance">
+      <div className="container">
         {/* Performance Section */}
         <InView triggerOnce={true}>
           {({ inView, ref }) => (
             <div
               ref={ref}
-              className={`w3-content w3-justify w3-text-grey w3-padding-16 
+              className={`section-container
                ${inView ? "animate-fade-in" : ""}`}
-              id="performance"
             >
-              <hr className="w3-opacity w3-text-white w3-padding-24 w3-margin-top" />
-              <h1 className="w3-text-light-grey w3-margin-bottom">
-                Performance
-              </h1>
-              <h6>
+              <h1 className="light-grey mt-5 mb-3">Performance</h1>
+
+              <p className="w3-text-grey mb-1" style={{ fontSize: "14px" }}>
                 Performance numbers through Lorem ipsum dolor sit amet
                 consectetur adipisicing elit. Pariatur qui reiciendis dolor
                 quasi aperiam ut repellendus sint in vel vero, cupiditate
                 tempore et nam repudiandae dolore, iste aliquid? Voluptatum,
-                expedita.
-              </h6>
+                expedita.{" "}
+              </p>
               <br />
               <div className="w3-row-padding" style={{ margin: "0 -16px" }}>
-                <div className="w3-col m4 w3-margin-bottom">
+                <div className="w3-col m4 mb-3">
                   <h5 className="w3-margin-top w3-text-white">
                     EVALUATION SUMMARY
                   </h5>
@@ -134,8 +97,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
                     ></div>
                   </div>
                 </div>
-                <div className="w3-col m1 w3-margin-bottom"></div>
-                <div className="w3-col m7 w3-margin-bottom">
+                <div className="w3-col m1 mb-3"></div>
+                <div className="w3-col m7 mb-3">
                   <h5 className="w3-margin-top w3-text-white">
                     PERFORMANCE METRICS
                   </h5>
@@ -173,18 +136,16 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           {({ inView, ref }) => (
             <div
               ref={ref}
-              className={`w3-content w3-justify w3-text-grey w3-padding-16 
+              className={`section-container
             ${inView ? "animate-fade-in" : ""}`}
               id="quick-stats"
             >
-              <h1 className="w3-text-light-grey w3-margin-bottom w3-margin-top">  
-                Quick Stats
-              </h1>
-              <h6>
+              <h1 className="mb-3 mt-3">Quick Stats</h1>
+              <h6 className="text-gray fw-light opacity-75 mb-4">
                 Quick Stats provide a weekly updated snapshot of four key
-                performance metrics—Batting Average, On Base Percentage,
-                Pop-Time, and Put-Outs— broadly highlighting important aspects
-                of play.
+                performance metrics. Batting Average, On Base Percentage,
+                Pop-Time, and Put-Outs broadly highlighting important aspects of
+                play.
               </h6>
               <div className="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
                 <div

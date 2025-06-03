@@ -10,7 +10,6 @@ function App() {
     <div className="App">
       <ErrorBoundary>
         <HashRouter>
-          <h1>Recruit Demo</h1>
           <Routes>
             <Route path="/" element={<Demo />} />
             <Route path="/demo" element={<Demo />} />

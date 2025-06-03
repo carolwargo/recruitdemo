@@ -21,19 +21,18 @@ const PlayerPosts = () => {
   ];
 
   return (
-    <div>
-      <div className="page-container justify-content-center"> 
+    <div   id="profile">
+      <div className=" justify-content-center"> 
         {/* Page Content */}
         <InView triggerOnce={true}>
           {({ inView, ref }) => (
             <div
               ref={ref}
-              className={`w3-content w3-justify w3-text-grey w3-padding-32 
+              className={`section-container 
                ${inView ? "animate-fade-in" : ""}`}
-              id="profile"
+            
             >
-              
-        <div >
+
         <h1 className="w3-text-light-grey w3-margin-top">What&apos;s Happening</h1>
           
           <div className={styles.wrapper}>
@@ -75,7 +74,6 @@ const PlayerPosts = () => {
             </div>
           </div>
             </div>
-        </div>
           )}
         </InView>
       </div>
