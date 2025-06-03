@@ -1,13 +1,13 @@
 import React from 'react';
 import { InView } from "react-intersection-observer";
-import styles from '../../styles/expandcards.module.css';
-import State from '../../assets/images/Expand/State.png';
-import Conf from '../../assets/images/Expand/Conf.png';
-import Preseason from '../../assets/images/Expand/Preseason.png';
-import TeamMD from '../../assets/images/Expand/TeamMD.png';
-import B26 from '../../assets/images/Expand/B26.png';
-import NCAA from '../../assets/images/Expand/NCAA.png';
-//import SBC from '../../assets/images/Expand/SBC.png';
+import styles from '../styles/expandcards.module.css';
+import State from '../assets/images/Expand/State.png';
+import Conf from '../assets/images/Expand/Conf.png';
+import Preseason from '../assets/images/Expand/Preseason.png';
+import TeamMD from '../assets/images/Expand/TeamMD.png';
+import B26 from '../assets/images/Expand/B26.png';
+import NCAA from '../assets/images/Expand/NCAA.png';
+//import SBC from '../assets/images/Expand/SBC.png';
 
 const PlayerPosts = () => {
   const cards = [

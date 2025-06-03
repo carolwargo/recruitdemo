@@ -1,12 +1,12 @@
 import { InView } from "react-intersection-observer";
-import ClaySmall from "../../assets/images/ClaySmall.png";
+import ClaySmall from "../assets/images/ClaySmall.png";
 import { RiHome6Line } from "react-icons/ri";
 import { HiAcademicCap } from "react-icons/hi";
 import { GiRotaryPhone } from "react-icons/gi";
 import { MdOutlineEmail } from "react-icons/md";
 import { GiTiedScroll } from "react-icons/gi";
 import { FaRegEye } from "react-icons/fa";
-import PlayerResume from "../../assets/PDF/PlayerResume.pdf";
+import PlayerResume from "../assets/PDF/PlayerResume.pdf";
 
 const PlayerProfile = () => {
   return (

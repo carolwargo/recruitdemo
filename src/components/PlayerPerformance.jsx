@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import StatsBW from "../../assets/images/Metrics/StatsBW.png";
+import StatsBW from "../assets/images/Metrics/StatsBW.png";
 import { InView } from "react-intersection-observer";
 
 const PlayerPerformance = () => {

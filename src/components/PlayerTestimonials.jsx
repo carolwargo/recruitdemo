@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { InView } from "react-intersection-observer";
-import Teacher from "../../assets/images/Testiminals/Teacher.png";
-import Principal from "../../assets/images/Testiminals/Principal.png";
-import Virginia from "../../assets/images/Testiminals/Virginia.png";
-import Wake from "../../assets/images/Testiminals/Wake.png";
-import Letter1 from "../../assets/images/Letters/Letter1.png";
-import Letter2 from "../../assets/images/Letters/Letter2.png";
-import Letter3 from "../../assets/images/Letters/Letter3.png";
-import Letter4 from "../../assets/images/Letters/Letter4.png";
-import "../../styles/demo.css";
+import Teacher from "../assets/images/Testiminals/Teacher.png";
+import Principal from "../assets/images/Testiminals/Principal.png";
+import Virginia from "../assets/images/Testiminals/Virginia.png";
+import Wake from "../assets/images/Testiminals/Wake.png";
+import Letter1 from "../assets/images/Letters/Letter1.png";
+import Letter2 from "../assets/images/Letters/Letter2.png";
+import Letter3 from "../assets/images/Letters/Letter3.png";
+import Letter4 from "../assets/images/Letters/Letter4.png";
+import "../styles/demo.css";
 
 const Letters = [
   {

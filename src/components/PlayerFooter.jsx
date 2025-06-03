@@ -2,10 +2,10 @@ import {useState} from "react";
 import { InView } from 'react-intersection-observer';
 import { Link } from "react-router-dom";
 import { FaFileDownload} from "react-icons/fa";
-import PlayerResume from "../../assets/PDF/PlayerResume.pdf";
-import PlayerPerformance from "../../assets/PDF/Performance/Performance.pdf";
-import Transcripts from "../../assets/PDF/Transcripts/Transcripts.pdf";
-import Calendar from "../../assets/PDF/Schedules/Schedules.pdf";
+import PlayerResume from "../assets/PDF/PlayerResume.pdf";
+import PlayerPerformance from "../assets/PDF/Performance/Performance.pdf";
+import Transcripts from "../assets/PDF/Transcripts/Transcripts.pdf";
+import Calendar from "../assets/PDF/Schedules/Schedules.pdf";
 
 const PlayerFooter = () => {
   const [showModal, setShowModal] = useState(false);
